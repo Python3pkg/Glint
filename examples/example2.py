@@ -14,7 +14,7 @@ class Application(glint.Runner):
 		print('This is the default action.')
 
 	def hello(self, name:'The name of who to say hello to.'):
-		print('Hello %s.' % name)
+		print(('Hello %s.' % name))
 
 	def goodbye(self, name:'Name of who to say good bye to.' = None, niceday:'Tell them to have a nice day.' = False):
 		msg = 'Good bye'

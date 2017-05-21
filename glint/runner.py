@@ -89,8 +89,8 @@ class Runner:
 				if not self._show_usage:
 					raise e
 				
-				print(e.message)
-				print('\nFor correct usage for command see: %s help --command %s' % (sys.argv[0], name))
+				print((e.message))
+				print(('\nFor correct usage for command see: %s help --command %s' % (sys.argv[0], name)))
 	
 	def help(self, command = None):
 		if command is not None:
@@ -118,7 +118,7 @@ class Runner:
 			usage.add_command(cmd, self._commands[cmd].description)
 		
 		if self._show_usage:
-			print('%s\n' % message if not utils.is_none_or_whitespace(message) else '')
+			print(('%s\n' % message if not utils.is_none_or_whitespace(message) else ''))
 			print(usage)
 		else:
 			return usage
@@ -130,7 +130,7 @@ class Runner:
 			if not self._show_usage:
 				raise UnknownCommandException(command_name)
 			
-			print('Unknown command %s, run \'%s help\' for a list of commands.' % (command_name, sys.argv[0]))
+			print(('Unknown command %s, run \'%s help\' for a list of commands.' % (command_name, sys.argv[0])))
 			return
 		
 		command = self._commands[command_name]
